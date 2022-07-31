@@ -1,7 +1,5 @@
 package com.greatlearning.BST_into_SkewedTree ;
 
-import java.util.Scanner ;
-       
 public class BST_into_skewedTree 
 {
          // BST node
@@ -30,7 +28,7 @@ public class BST_into_skewedTree
             else if ( key > x.key )
             x = x.right ;
             else {
-            System.out.println(" Value already exists!!! ") ;
+            System.out.println( " Value already exists!!! " ) ;
             return newnode ;
             }
            }
@@ -65,36 +63,9 @@ public class BST_into_skewedTree
            leftNodes( root.right );
            }
          }
-
-         
-         public static void main( String args[] ) {
-           Scanner sc = new Scanner( System.in ) ;
-           int value ;
-           Node root = null ;
-           Node result = null ;
-           int[] arr = { 10, 30, 50, 55, 60 } ;
-           for ( int i = 0; i < arr.length; i++ ) {
-             value = arr[i] ;
-             System.out.println(" \nInsert value at " + (i+1) + " : " ) ;
-             value = arr[i] ;
-             if ( root == null ) {
-                root = insert( root, value ) ;
-                } 
-                else {
-                result = insert( root, value ) ;
-                if ( result.key == value )
-                i -= 1 ;
-                }
-           System.out.println() ;
-           System.out.println(" Inorder of Binary Tree\n ") ;
-           Inorder( root ) ;
-           }
-           
-           System.out.println(" \n\n right skewed tree values are : ") ;
-           leftNodes( root ) ;
-           sc.close() ;
-          }
 }
 
+         
+         
 
 	
